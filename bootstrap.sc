@@ -18,13 +18,9 @@ val spark = {
       AmmoniteSparkSession.builder()
         .master("local[*]")
         .config("spark.driver.host", "localhost")
-//        .config("spark.executor.instances", "4")
         .config("spark.executor.memory", "12g")
         .config("spark.hadoop.io.compression.codecs", "io.projectglow.sql.util.BGZFCodec")
-//        .config("spark.sql.execution.useObjectHashAggregateExec", "false")
         .config("spark.sql.files.maxPartitionBytes", "33554432")
-//        .config("spark.sql.shuffle.partitions", "100")
-//        .config("spark.default.parallelism", "100")
         .getOrCreate()
     }
 
